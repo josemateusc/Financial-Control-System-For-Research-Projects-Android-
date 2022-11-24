@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context=".ShowProjeto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="0dp"
+        android:layout_height="96dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bree_serif"
+            android:text="Informações do Projeto"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/project_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        app:startIconDrawable="@drawable/article">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/showProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:fontFamily="@font/bree_serif" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/professor_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/showProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:fontFamily="@font/bree_serif" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/capitalBar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+
+        android:layout_marginTop="4dp"
+        android:indeterminateOnly="false"
+
+        android:progressDrawable="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        tools:progress="60" />
+
+    <TextView
+        android:id="@+id/capitalPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/capitalBar"
+        app:layout_constraintEnd_toEndOf="@+id/capitalBar"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/capitalBar"
+        app:layout_constraintTop_toTopOf="@+id/capitalBar"
+        app:layout_constraintVertical_bias="0.487"
+        tools:text="60%" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/bree_serif"
+            android:text="Rubrica de Despesas de Capital:"
+            android:textColor="#1A1915"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="More information"
+        android:onClick="infoButtonCapital"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/capitalBar"
+        app:layout_constraintTop_toTopOf="@+id/capitalBar"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="Rubrica de Material de Consumo:"
+        android:textColor="#1A1915"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/capitalBar" />
+    <ProgressBar
+        android:id="@+id/materialBar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+
+        android:layout_marginTop="4dp"
+        android:indeterminateOnly="false"
+
+        android:progressDrawable="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        tools:progress="60" />
+    <TextView
+        android:id="@+id/materialPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/materialBar"
+        app:layout_constraintEnd_toEndOf="@+id/materialBar"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/materialBar"
+        app:layout_constraintTop_toTopOf="@+id/materialBar"
+        app:layout_constraintVertical_bias="0.487"
+        tools:text="60%" />
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="More information"
+        android:onClick="infoButtonMaterial"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/materialBar"
+        app:layout_constraintTop_toTopOf="@+id/materialBar"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="Rubrica de Serviço Pessoa Física:"
+        android:textColor="#1A1915"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/materialBar" />
+    <ProgressBar
+        android:id="@+id/pfBar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+
+        android:layout_marginTop="4dp"
+        android:indeterminateOnly="false"
+
+        android:progressDrawable="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:progress="60" />
+    <TextView
+        android:id="@+id/pfPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/pfBar"
+        app:layout_constraintEnd_toEndOf="@+id/pfBar"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/pfBar"
+        app:layout_constraintTop_toTopOf="@+id/pfBar"
+        app:layout_constraintVertical_bias="0.487"
+        tools:text="60%" />
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="More information"
+        android:onClick="infoButtonPf"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/pfBar"
+        app:layout_constraintTop_toTopOf="@+id/pfBar"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="Rubrica de Serviço Pessoa Jurídica:"
+        android:textColor="#1A1915"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/pfBar" />
+    <ProgressBar
+        android:id="@+id/pjBar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+
+        android:layout_marginTop="4dp"
+        android:indeterminateOnly="false"
+
+        android:progressDrawable="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        tools:progress="60" />
+    <TextView
+        android:id="@+id/pjPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/pjBar"
+        app:layout_constraintEnd_toEndOf="@+id/pjBar"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/pjBar"
+        app:layout_constraintTop_toTopOf="@+id/pjBar"
+        app:layout_constraintVertical_bias="0.487"
+        tools:text="60%" />
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="More information"
+        android:onClick="infoButtonPj"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/pjBar"
+        app:layout_constraintTop_toTopOf="@+id/pjBar"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="Rubrica de Diárias:"
+        android:textColor="#1A1915"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/pjBar" />
+    <ProgressBar
+        android:id="@+id/diariaBar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+
+        android:layout_marginTop="4dp"
+        android:indeterminateOnly="false"
+
+        android:progressDrawable="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        tools:progress="60" />
+    <TextView
+        android:id="@+id/diariaPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/diariaBar"
+        app:layout_constraintEnd_toEndOf="@+id/diariaBar"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/diariaBar"
+        app:layout_constraintTop_toTopOf="@+id/diariaBar"
+        app:layout_constraintVertical_bias="0.487"
+        tools:text="60%" />
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="More information"
+        android:onClick="infoButtonDiaria"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/diariaBar"
+        app:layout_constraintTop_toTopOf="@+id/diariaBar"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="Rubrica de Passagens:"
+        android:textColor="#1A1915"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/diariaBar" />
+    <ProgressBar
+        android:id="@+id/passagemBar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+
+        android:layout_marginTop="4dp"
+        android:indeterminateOnly="false"
+
+        android:progressDrawable="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        tools:progress="60" />
+    <TextView
+        android:id="@+id/passagemPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/passagemBar"
+        app:layout_constraintEnd_toEndOf="@+id/passagemBar"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/passagemBar"
+        app:layout_constraintTop_toTopOf="@+id/passagemBar"
+        app:layout_constraintVertical_bias="0.487"
+        tools:text="60%" />
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="More information"
+        android:onClick="infoButtonPassagem"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/passagemBar"
+        app:layout_constraintTop_toTopOf="@+id/passagemBar"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#004aad"
+        android:fontFamily="@font/bree_serif"
+        android:onClick="alterarButton"
+        android:text="Editar"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passagemBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

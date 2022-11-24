@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SCPP</string>
+    <string name="logo">Logo</string>
+    <string name="boas_vindas">Bem Vindo ao SCPP!</string>
+    <string name="sinopse">O seu Sistema de Controle Financeiro para Projetos de Pesquisa ;)</string>
+    <string name="acessar">Acessar a revolução do controle Financeiro!</string>
+    <string name="quote">Investir em conhecimento rende sempre os melhores juros.\n~Benjamin Franklin</string>
+    <string name="features_app">•Cadastrar projetos de Pesquisa\n•Removê-los\n•Consultá-los\n•Alterá-los\n•Gerenciar suas listas de despesas</string>
+    <string name="title">Agora você pode escolher por onde navegar pelo app!\nDeseja gerenciar os Projetos ou Listas de Despesas?</string>
+    <string name="project_name">Nome do Projeto</string>
+    <string name="professor_name">Nome do Professor Responsável</string>
+    <string name="list_expenses">Lista de Despesas</string>
+    <string name="hint_list_expenses">Ex.:Lápis,Borracha,Caneta,Raspberry Pi</string>
+    <string name="opcoes_projetos">A lista de Projetos está abaixo!</string>
+    <string name="opcoes_despesas">A lista de Despesas está abaixo!</string>
+</resources>

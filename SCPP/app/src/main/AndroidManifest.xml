@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.scpp">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SCPP"
+        tools:targetApi="31">
+        <activity
+            android:name=".EditExpense"
+            android:exported="false" />
+        <activity
+            android:name=".AddExpense"
+            android:exported="false" />
+        <activity
+            android:name=".ShowList"
+            android:exported="false" />
+        <activity
+            android:name=".AcoesDespesas"
+            android:exported="false" />
+        <activity
+            android:name=".ShowProjeto"
+            android:exported="false" />
+        <activity
+            android:name=".AlterarProjeto"
+            android:exported="false" />
+        <activity
+            android:name=".ProjetosRubricas3"
+            android:exported="false" />
+        <activity
+            android:name=".ProjetosRubricas2"
+            android:exported="false" />
+        <activity
+            android:name=".AcoesProjetos"
+            android:exported="false" />
+        <activity
+            android:name=".ProjetosRubricas"
+            android:exported="false" />
+        <activity
+            android:name=".ProjetosMenu"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
